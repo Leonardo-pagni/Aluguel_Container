@@ -32,7 +32,7 @@ public class RegistroController : Controller
             TempData["ErrorMessage"] = "É necessário ter 18 anos para realizar o registro!";
             return View("Index", form);
         }
-        var cliente = new Cliente(form.Nome, form.Email, form.CPF)
+        var cliente = new Cliente(form.Nome, new Email(form.Email), form.CPF)
         {
             Celular = form.Celular,
             CEP = form.CEP,

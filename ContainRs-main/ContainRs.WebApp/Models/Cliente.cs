@@ -2,16 +2,18 @@
 
 public class Cliente
 {
-    public Cliente(string nome, string email, string cPF)
+    private Cliente() { }//EF core
+    public Cliente(string nome, Email email, string cpf )
     {
         Nome = nome;
         Email = email;
-        CPF = cPF;
+        CPF = cpf;
     }
+
 
     public Guid Id { get; set; }
     public string Nome { get; private set; }
-    public string Email { get; private set; }
+    public Email Email { get; private set; }
     public string CPF { get; private set; }
     public string? Celular { get; set; }
     public string? CEP { get; set; }
