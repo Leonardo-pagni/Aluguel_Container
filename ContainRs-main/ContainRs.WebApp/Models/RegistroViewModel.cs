@@ -26,4 +26,6 @@ public class RegistroViewModel
     public string? Bairro { get; set; }
     public string? Municipio { get; set; }
     public string? Estado { get; set; }
+    [Required(ErrorMessage = "Campo obrigatório")]
+    public int Idade { get; set; }
 }

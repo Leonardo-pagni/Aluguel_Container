@@ -1,6 +1,7 @@
 ﻿using ContainRs.WebApp.Data;
 using ContainRs.WebApp.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace ContainRs.WebApp.Controllers;
 
@@ -26,6 +27,11 @@ public class RegistroController : Controller
     {
         if (!ModelState.IsValid) return View("Index", form);
 
+        if (form.Idade < 18)
+        {
+            TempData["ErrorMessage"] = "É necessário ter 18 anos para realizar o registro!";
+            return View("Index", form);
+        }
         var cliente = new Cliente(form.Nome, form.Email, form.CPF)
         {
             Celular = form.Celular,
@@ -35,7 +41,8 @@ public class RegistroController : Controller
             Complemento = form.Complemento,
             Bairro = form.Bairro,
             Municipio = form.Municipio,
-            Estado = form.Estado
+            Estado = form.Estado,
+            Idade = form.Idade
         };
         context.Clientes.Add(cliente);
         await context.SaveChangesAsync();
