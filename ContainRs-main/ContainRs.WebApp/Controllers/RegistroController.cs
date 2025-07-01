@@ -1,5 +1,7 @@
-﻿using ContainRs.WebApp.Data;
+﻿using Azure.Core;
+using ContainRs.WebApp.Data;
 using ContainRs.WebApp.Models;
+using ContainRs.WebApp.UseCases;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
@@ -32,20 +34,13 @@ public class RegistroController : Controller
             TempData["ErrorMessage"] = "É necessário ter 18 anos para realizar o registro!";
             return View("Index", form);
         }
-        var cliente = new Cliente(form.Nome, new Email(form.Email), form.CPF)
-        {
-            Celular = form.Celular,
-            CEP = form.CEP,
-            Rua = form.Rua,
-            Numero = form.Numero,
-            Complemento = form.Complemento,
-            Bairro = form.Bairro,
-            Municipio = form.Municipio,
-            Estado = form.Estado,
-            Idade = form.Idade
-        };
-        context.Clientes.Add(cliente);
-        await context.SaveChangesAsync();
+        var useCase = new RegistrarCliente(
+            context, form.Nome, new Email(form.Email),
+            form.CPF, form.Celular, form.CEP,
+            form.Rua, form.Numero, form.Complemento,
+            form.Bairro, form.Municipio, form.Estado, form.Idade);
+
+        await useCase.ExecutarAsync();
 
         return RedirectToAction("Sucesso");
     }
