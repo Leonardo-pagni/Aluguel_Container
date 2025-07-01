@@ -20,7 +20,7 @@ namespace ContainRs.WebApp.Controllers
         public async Task<IActionResult> CreateAsync(RegistroViewModel request)
         {
             var useCase = new RegistrarCliente(
-                contect, request.Nome, new Email(request.Email),
+                context, request.Nome, new Email(request.Email),
                 request.CPF, request.Celular, request.CEP,
                 request.Rua, request.Numero, request.Complemento,
                 request.Bairro, request.Municipio, request.Estado, request.Idade);
