@@ -24,7 +24,7 @@ namespace ContainRs.WebApp.Controllers
                 context, request.Nome, new Email(request.Email),
                 request.CPF, request.Celular, request.CEP,
                 request.Rua, request.Numero, request.Complemento,
-                request.Bairro, request.Municipio, request.Estado, request.Idade);
+                request.Bairro, request.Municipio, UfStringConverter.From(request.Estado), request.Idade);
 
             var cliente = new Cliente(request.Nome, new Email(request.Email), request.CPF)
             {
@@ -35,7 +35,7 @@ namespace ContainRs.WebApp.Controllers
                 Complemento = request.Complemento,
                 Bairro = request.Bairro,
                 Municipio = request.Municipio,
-                Estado = request.Estado,
+                Estado = UfStringConverter.From(request.Estado),
                 Idade = request.Idade
             };
 

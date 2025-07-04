@@ -37,7 +37,7 @@ public class RegistroController : Controller
             context, form.Nome, new Email(form.Email),
             form.CPF, form.Celular, form.CEP,
             form.Rua, form.Numero, form.Complemento,
-            form.Bairro, form.Municipio, form.Estado, form.Idade);
+            form.Bairro, form.Municipio, UfStringConverter.From(form.Estado), form.Idade);
 
         await useCase.ExecutarAsync();
 
