@@ -1,7 +1,7 @@
 ﻿using ContainRs.Domain.Models;
-using ContainRs.WebApp.Data;
 
-namespace ContainRs.WebApp.UseCases
+
+namespace ContainRs.Application.UseCases
 {
     public class RegistrarCliente
     {
@@ -34,7 +34,7 @@ namespace ContainRs.WebApp.UseCases
         public string? Bairro { get; }
         public string? Municipio { get; }
         public string? Estado { get; }
-        public int Idade {  get; }
+        public int Idade { get; }
 
         public async Task<Cliente> ExecutarAsync()
         {
