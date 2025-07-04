@@ -1,9 +1,9 @@
-﻿namespace ContainRs.WebApp.Models;
+﻿namespace ContainRs.Domain.Models;
 
 public class Cliente
 {
     private Cliente() { }//EF core
-    public Cliente(string nome, Email email, string cpf )
+    public Cliente(string nome, Email email, string cpf)
     {
         Nome = nome;
         Email = email;

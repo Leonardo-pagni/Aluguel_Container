@@ -1,6 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 
-namespace ContainRs.WebApp.Models
+namespace ContainRs.Domain.Models
 {
     public class Email
     {
@@ -11,7 +11,7 @@ namespace ContainRs.WebApp.Models
             );
         public Email(string value)
         {
-            if(!EmailRegex.IsMatch(value))
+            if (!EmailRegex.IsMatch(value))
             {
                 throw new ArgumentException("E-mail inválido");
             }

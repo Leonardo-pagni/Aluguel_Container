@@ -1,4 +1,5 @@
-﻿using ContainRs.WebApp.Data;
+﻿using ContainRs.Domain.Models;
+using ContainRs.WebApp.Data;
 using ContainRs.WebApp.Models;
 using ContainRs.WebApp.UseCases;
 using Microsoft.AspNetCore.Mvc;

@@ -1,4 +1,4 @@
-﻿using ContainRs.WebApp.Models;
+﻿using ContainRs.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace ContainRs.WebApp.Data;

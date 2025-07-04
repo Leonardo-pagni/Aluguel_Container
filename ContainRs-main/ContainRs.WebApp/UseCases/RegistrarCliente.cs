@@ -1,5 +1,5 @@
-﻿using ContainRs.WebApp.Data;
-using ContainRs.WebApp.Models;
+﻿using ContainRs.Domain.Models;
+using ContainRs.WebApp.Data;
 
 namespace ContainRs.WebApp.UseCases
 {

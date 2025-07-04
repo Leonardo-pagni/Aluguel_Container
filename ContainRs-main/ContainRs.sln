@@ -10,7 +10,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Itens de Solução", "Itens
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContainRs.Testes", "ContainRs.Testes\ContainRs.Testes.csproj", "{1AAF8A22-E772-40FB-86F7-A7C38945F65A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContainRs.Testes", "ContainRs.Testes\ContainRs.Testes.csproj", "{1AAF8A22-E772-40FB-86F7-A7C38945F65A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContainRs.Domain", "ContainRs.Domain\ContainRs.Domain.csproj", "{2F0119C0-D767-4362-8C83-F1734F693279}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,6 +28,10 @@ Global
 		{1AAF8A22-E772-40FB-86F7-A7C38945F65A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1AAF8A22-E772-40FB-86F7-A7C38945F65A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1AAF8A22-E772-40FB-86F7-A7C38945F65A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F0119C0-D767-4362-8C83-F1734F693279}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F0119C0-D767-4362-8C83-F1734F693279}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F0119C0-D767-4362-8C83-F1734F693279}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F0119C0-D767-4362-8C83-F1734F693279}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
